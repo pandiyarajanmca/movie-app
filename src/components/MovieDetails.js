@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const DEFAULT_PLACEHOLDER_IMAGE =
   "../public/images/placeholder.jpg";
 
 
 const MovieDetails = ({ movie }) => {
-  fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=b9bd48a6`)
+  const [loading, setLoading] = useState(true);
+  const [movies, setMovies] = useState([]);
+  const [errorMessage, setErrorMessage] = useState(null);
+  fetch(`https://www.omdbapi.com/?i=${movie.Title}&apikey=b9bd48a6`)
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === "True") {
