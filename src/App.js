@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Movies from "./components/Movies";
-import MovieDetails from "./components/MovieDetails";
+//import MovieDetails from "./components/MovieDetails";
 import Search from "./components/Search";
 
 const MOVIE_API_URL = "https://www.omdbapi.com/?apikey=b9bd48a6&s=Marvel&type=movie";

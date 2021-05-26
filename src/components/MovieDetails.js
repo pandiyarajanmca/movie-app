@@ -1,24 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const DEFAULT_PLACEHOLDER_IMAGE =
   "../public/images/placeholder.jpg";
 
 
 const MovieDetails = ({ movie }) => {
-  const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([]);
-  const [errorMessage, setErrorMessage] = useState(null);
-  fetch(`https://www.omdbapi.com/?i=${movie.Title}&apikey=b9bd48a6`)
-      .then(response => response.json())
-      .then(jsonResponse => {
-        if (jsonResponse.Response === "True") {
-          setMovies(jsonResponse.Search);
-          setLoading(false);
-        } else {
-          setErrorMessage(jsonResponse.Error);
-          setLoading(false);
-        }
-    });
   const poster =
     movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
   return (
