@@ -51,7 +51,17 @@
 
 .movie {
   padding: 5px 25px 10px 25px;
-  max-width: 25%;
+  max-width: 20%;
+}
+
+.movie img {
+  max-width: 200px;
+}
+
+.movie h2 {
+  font-size: 20px;
+  text-overflow: ellipsis;
+
 }
 
 .errorMessage {
@@ -59,7 +69,6 @@
   font-weight: bold;
   color: rgb(161, 15, 15);
 }
-
 
 .search {
   display: flex;
@@ -72,7 +81,7 @@
 
 input[type="submit"] {
   padding: 5px;
-  background-color: transparent;
+  background-color: #1596f5;
   color: black;
   border: 1px solid black;
   width: 80px;
